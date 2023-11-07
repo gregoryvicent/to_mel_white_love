@@ -1,0 +1,54 @@
+---
+interface Props {
+    img: string;
+    text: string;
+}
+
+const { img, text } = Astro.props;
+---
+
+<article id="gallery-item" class="w-36 justify-self-center relative">
+    <div
+        id="cover"
+        class="w-full h-full bg-red-400 absolute rounded-full flex justify-center items-center font-bold p-2 isDeactive"
+    >
+        <p class="text-red-900 text-center">{text}</p>
+    </div>
+    <img class="rounded-full my-shadow" src={img} alt="Melani y yo imagen 1" />
+</article>
+
+<style>
+    .my-shadow {
+        box-shadow: -2px 5px 25px 5px rgba(214, 11, 112, 0.4);
+    }
+
+    .isActive {
+        animation-name: IsActive;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    .isDeactive {
+        animation-name: IsDeactive;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes IsActive {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    @keyframes IsDeactive {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+</style>

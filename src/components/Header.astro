@@ -1,0 +1,67 @@
+<div>
+    <header class="mx-5 mt-8 flex justify-center items-center">
+        <span class="text-6xl loveAnimationHeart">💝</span>
+        <h1 class="text-pink-400 text-2xl font-bold loveAnimationText sm:text-4xl">
+            Gregory x Melani
+        </h1>
+    </header>
+    <p class="text-center text-lg text-pink-700 mt-3 font-semibold loveAnimationSubtitle">Una pareja genial</p>
+</div>
+
+<style>
+    @keyframes LoveAnimation {
+        0% {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+
+        60% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: rotate(20deg);
+        }
+    }
+    .loveAnimationHeart {
+        animation-name: LoveAnimation;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes LoveAnimationText {
+        0% {
+            opacity: 0;
+            transform: translateX(100%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    .loveAnimationText {
+        animation-name: LoveAnimationText;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes LoveAnimationSubtitle {
+        0% {
+            opacity: 0;
+            transform: translateY(100%);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    .loveAnimationSubtitle {
+        animation-name: LoveAnimationSubtitle;
+        animation-duration: 2s;
+        animation-delay: 2.3s;
+        animation-fill-mode: both;
+    }
+</style>
